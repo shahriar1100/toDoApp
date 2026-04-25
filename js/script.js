@@ -1,0 +1,6 @@
+const taskAddInput = document.getElementById("taskAddInput")
+const addTaskText = document.getElementById("addTaskText")
+const addTaskNumber = document.getElementById("addTaskNumber")
+const addTaskDelete = document.getElementById("addTaskDelete")
+const deleteAllTaskBtn = document.getElementById("deleteAllTaskBtn")
+const taskAddBtn = document.getElementById("taskAddBtn")

@@ -27,13 +27,14 @@
         <!-- Input -->
         <div class="flex gap-2">
           <input
+            id="taskAddInput"
             type="text"
             placeholder="Add a task..."
             class="flex-1 px-3 py-2 text-sm rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
           />
 
           <button
-            class="px-4 py-2 text-sm text-white rounded-lg bg-gradient-to-r from-purple-600 to-pink-500 hover:scale-105 active:scale-95 transition duration-200 shadow-md"
+           id="taskAddBtn" class="px-4 py-2 text-sm text-white rounded-lg bg-gradient-to-r from-purple-600 to-pink-500 hover:scale-105 active:scale-95 transition duration-200 shadow-md"
           >
             Add
           </button>
@@ -60,18 +61,18 @@
           <li
             class="flex items-center justify-between p-2 rounded-lg bg-white shadow-sm hover:shadow-md hover:-translate-y-[2px] transition duration-200"
           >
-            <div class="flex items-center gap-2">
+            <div id="addTaskText" class="flex items-center gap-2">
               <input type="checkbox" class="accent-purple-600" />
-              <span class="text-sm">Learn Tailwind</span>
+              <span  class="text-sm">Learn Tailwind</span>
             </div>
 
-            <button class="text-red-400 hover:text-red-600 transition">
+            <button id="addTaskDelete" class="text-red-400 hover:text-red-600 transition">
               ✕
             </button>
           </li>
 
           <!-- Completed -->
-          <li
+          <!-- <li
             class="flex items-center justify-between p-2 rounded-lg bg-white shadow-sm opacity-70 hover:opacity-100 transition"
           >
             <div class="flex items-center gap-2">
@@ -84,13 +85,13 @@
             <button class="text-red-400 hover:text-red-600 transition">
               ✕
             </button>
-          </li>
+          </li> -->
         </ul>
 
         <!-- Footer -->
         <div class="flex justify-between items-center text-xs text-gray-500">
-          <span>2 tasks</span>
-          <button class="text-red-500 hover:underline transition">
+          <span id="addTaskNumber">2 tasks</span>
+          <button id="deleteTask" class="text-red-500 hover:underline transition">
             Clear All
           </button>
         </div>
