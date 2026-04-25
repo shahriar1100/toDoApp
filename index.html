@@ -1,23 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do App</title>
-    <link rel="stylesheet" href="src/output.css">
-</head>
-<body class="min-h-screen flex items-center justify-center px-3 
-bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500">
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body
+    class="min-h-screen flex items-center justify-center px-3 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500"
+  >
     <!-- Card -->
-  <div class="w-full max-w-sm p-[1px] rounded-2xl bg-gradient-to-r from-white/40 to-white/10 backdrop-blur-lg">
-    
-    <div class="bg-white/80 backdrop-blur-md rounded-2xl p-5 space-y-4 shadow-xl">
+    <div
+      class="w-full max-w-sm p-[1px] rounded-2xl bg-gradient-to-r from-white/40 to-white/10 backdrop-blur-lg"
+    >
+      <div
+        class="bg-white/80 backdrop-blur-md rounded-2xl p-5 space-y-4 shadow-xl"
+      >
+        <!-- Header -->
+        <div class="text-center">
+          <h1 class="text-xl font-bold text-gray-800 tracking-wide">
+            Today Plan
+          </h1>
+          <p class="text-xs text-gray-500">Make your day productive 🚀</p>
+        </div>
 
-      <!-- Header -->
-      <div class="text-center">
-        <h1 class="text-xl font-bold text-gray-800 tracking-wide">Today Plan</h1>
-        <p class="text-xs text-gray-500">Make your day productive 🚀</p>
+        <!-- Input -->
+        <div class="flex gap-2">
+          <input
+            type="text"
+            placeholder="Add a task..."
+            class="flex-1 px-3 py-2 text-sm rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
+          />
+
+          <button
+            class="px-4 py-2 text-sm text-white rounded-lg bg-gradient-to-r from-purple-600 to-pink-500 hover:scale-105 active:scale-95 transition duration-200 shadow-md"
+          >
+            Add
+          </button>
+        </div>
+
+
+
       </div>
-
-</body>
+    </div>
+  </body>
 </html>
