@@ -28,9 +28,9 @@ taskAddBtn.addEventListener("click", ()=>{
     button.innerText = "✕"
     button.classList.add(...classListForButton)
     li.appendChild(button)
-
+    
 
     span.innerText = taskAddInput.value
-    
+    taskAddInput.value = ""
     
 })
