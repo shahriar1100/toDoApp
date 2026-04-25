@@ -8,6 +8,7 @@ const taskAddBtn = document.getElementById("taskAddBtn")
 const classListForLi = ["flex", "items-center", "justify-between", "p-2", "rounded-lg", "bg-white", "shadow-sm", "hover:shadow-md", "hover:-translate-y-[2px]", "transition", "duration-200",]
 const classListForDiv = ["flex", "items-center", "gap-2"]
 const classListForInput = ["accent-purple-600"]
+const classListForButton = ["text-red-400", "hover:text-red-600", "transition"]
 
 taskAddBtn.addEventListener("click", ()=>{
     let li = document.createElement("li")
@@ -23,8 +24,10 @@ taskAddBtn.addEventListener("click", ()=>{
     let span = document.createElement("span")
     span.classList.add("text-sm")
     div.appendChild(span)
-    
-
+    let button = document.createElement("button")
+    button.innerText = "✕"
+    button.classList.add(...classListForButton)
+    li.appendChild(button)
 
 
     span.innerText = taskAddInput.value
