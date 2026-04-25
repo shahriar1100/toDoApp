@@ -56,14 +56,14 @@
         </div>
 
         <!-- Task List -->
-        <ul class="space-y-2">
+        <ul id="addTask" class="space-y-2">
           <!-- Task -->
           <li
             class="flex items-center justify-between p-2 rounded-lg bg-white shadow-sm hover:shadow-md hover:-translate-y-[2px] transition duration-200"
           >
-            <div id="addTaskText" class="flex items-center gap-2">
+            <div class="flex items-center gap-2">
               <input type="checkbox" class="accent-purple-600" />
-              <span  class="text-sm">Learn Tailwind</span>
+              <span id="addTaskText" class="text-sm">Learn Tailwind</span>
             </div>
 
             <button id="addTaskDelete" class="text-red-400 hover:text-red-600 transition">
@@ -98,5 +98,8 @@
         
       </div>
     </div>
+
+
+    <script src="js/script.js"></script>
   </body>
 </html>
