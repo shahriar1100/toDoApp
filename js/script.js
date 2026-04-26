@@ -1,5 +1,13 @@
 const taskAddInput = document.getElementById("taskAddInput")
 const addTask = document.getElementById("addTask")
+// if user put value and click enter then user valu add in plan list section
+taskAddInput.addEventListener("keypress", function(e){
+    if(e.key === "Enter"){
+        taskAddBtn.click();
+    }
+});
+
+
 const addTaskText = document.getElementById("addTaskText")
 const addTaskNumber = document.getElementById("addTaskNumber")
 const addTaskDelete = document.getElementById("addTaskDelete")
@@ -32,26 +40,26 @@ taskAddBtn.addEventListener("click", ()=>{
     button.classList.add(...classListForButton)
     li.appendChild(button)
 
-    input.addEventListener("click", function (){
+    input.addEventListener("change", function (){
         if(input.checked){
-            span.classList.add("line-through")
+            span.classList.add("line-through", "text-gray-400")
         }else{
-            span.classList.remove("line-through")
+            span.classList.remove("line-through", "text-gray-400")
         }
         
     })
     
     button.addEventListener("click", function (){
-        li.remove()
-    })
-
-    deleteTask.addEventListener("click", function (){
-        addTask.innerHTML = "";
-    })
-    
+    li.classList.add("scale-90", "opacity-0")
+    setTimeout(()=> li.remove(), 200)
+})
 
     span.innerText = taskAddInput.value
     taskAddInput.value = "" 
     }
       
 })
+
+deleteTask.addEventListener("click", function (){
+        addTask.innerHTML = "";
+    })
