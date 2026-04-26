@@ -3,7 +3,7 @@ const addTask = document.getElementById("addTask")
 const addTaskText = document.getElementById("addTaskText")
 const addTaskNumber = document.getElementById("addTaskNumber")
 const addTaskDelete = document.getElementById("addTaskDelete")
-const deleteAllTaskBtn = document.getElementById("deleteAllTaskBtn")
+const deleteTask = document.getElementById("deleteTask")
 const taskAddBtn = document.getElementById("taskAddBtn")
 const classListForLi = ["flex", "items-center", "justify-between", "p-2", "rounded-lg", "bg-white", "shadow-sm", "hover:shadow-md", "hover:-translate-y-[2px]", "transition", "duration-200",]
 const classListForDiv = ["flex", "items-center", "gap-2"]
@@ -43,6 +43,10 @@ taskAddBtn.addEventListener("click", ()=>{
     
     button.addEventListener("click", function (){
         li.remove()
+    })
+
+    deleteTask.addEventListener("click", function (){
+        addTask.innerHTML = "";
     })
     
 
