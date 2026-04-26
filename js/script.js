@@ -11,7 +11,10 @@ const classListForInput = ["accent-purple-600"]
 const classListForButton = ["text-red-400", "hover:text-red-600", "transition"]
 
 taskAddBtn.addEventListener("click", ()=>{
-    let li = document.createElement("li")
+    if(taskAddInput.value === ""){
+        alert("please add your note")
+    }else{
+        let li = document.createElement("li")
     addTask.appendChild(li)
     li.classList.add(...classListForLi)
     let div = document.createElement("div")
@@ -28,9 +31,23 @@ taskAddBtn.addEventListener("click", ()=>{
     button.innerText = "✕"
     button.classList.add(...classListForButton)
     li.appendChild(button)
+
+    input.addEventListener("click", function (){
+        if(input.checked){
+            span.classList.add("line-through")
+        }else{
+            span.classList.remove("line-through")
+        }
+        
+    })
+    
+    button.addEventListener("click", function (){
+        li.remove()
+    })
     
 
     span.innerText = taskAddInput.value
-    taskAddInput.value = ""
-    
+    taskAddInput.value = "" 
+    }
+      
 })
